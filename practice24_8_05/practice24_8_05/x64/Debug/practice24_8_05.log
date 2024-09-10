@@ -1,0 +1,4 @@
+﻿  test.c
+C:\code\practice24_8_05\practice24_8_05\test.c(785,4): warning C4090: “return”: 不同的“const”限定符
+C:\code\practice24_8_05\practice24_8_05\test.c(831,6): warning C4101: “arr2”: 未引用的局部变量
+  practice24_8_05.vcxproj -> C:\code\practice24_8_05\x64\Debug\practice24_8_05.exe
