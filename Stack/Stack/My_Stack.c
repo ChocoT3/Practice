@@ -868,80 +868,82 @@
 //#pragma endregion
 
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include<errno.h>
-
-#define eleType int
-
-typedef struct Node
-{
-	int data;
-	struct Node* next;
-}Node,*LinkedList;
-
-
-
-LinkedList CreateList()
-{
-	LinkedList head = (Node*)malloc(sizeof(Node));
-	if (head != NULL)
-	{
-		head->next = NULL;
-	}
-	else
-	{
-		printf("%s", strerror(errno));
-		return NULL;
-	}
-	return head;
-}
-
-void DetoryList(LinkedList head)
-{
-	while (head != NULL)
-	{
-		Node* temp = head;
-		head = temp->next;
-		free(temp);
-	}
-}
-
-void InsertHead(LinkedList head,eleType element)
-{
-	Node* newNode = (Node*)malloc(sizeof(Node));
-	if (newNode != NULL)
-	{
-		newNode->data = element;
-		newNode->next = NULL;
-		head->next = newNode;
-		head->data++;
-	}
-	else
-	{
-		printf("%s", strerror(errno));
-		return;
-	}
-
-}
-
-void PrintList(LinkedList head)
-{
-	Node* current = head->next;
-	while (current != NULL)
-	{
-		printf("%d->", current->data);
-		current = current->next;
-	}
-	printf("NULL\n");
-}
-
-int main()
-{
-	LinkedList head = CreateList();
-	InsertHead(head,10);
-	PrintList(head);
-	DetoryList(head);
-	return 0;
-}
+#pragma region test
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<string.h>
+//#include<errno.h>
+//
+//#define eleType int
+//
+//typedef struct Node
+//{
+//	int data;
+//	struct Node* next;
+//}Node, * LinkedList;
+//
+//
+//
+//LinkedList CreateList()
+//{
+//	LinkedList head = (Node*)malloc(sizeof(Node));
+//	if (head != NULL)
+//	{
+//		head->next = NULL;
+//	}
+//	else
+//	{
+//		printf("%s", strerror(errno));
+//		return NULL;
+//	}
+//	return head;
+//}
+//
+//void DetoryList(LinkedList head)
+//{
+//	while (head != NULL)
+//	{
+//		Node* temp = head;
+//		head = temp->next;
+//		free(temp);
+//	}
+//}
+//
+//void InsertHead(LinkedList head, eleType element)
+//{
+//	Node* newNode = (Node*)malloc(sizeof(Node));
+//	if (newNode != NULL)
+//	{
+//		newNode->data = element;
+//		newNode->next = NULL;
+//		head->next = newNode;
+//		head->data++;
+//	}
+//	else
+//	{
+//		printf("%s", strerror(errno));
+//		return;
+//	}
+//
+//}
+//
+//void PrintList(LinkedList head)
+//{
+//	Node* current = head->next;
+//	while (current != NULL)
+//	{
+//		printf("%d->", current->data);
+//		current = current->next;
+//	}
+//	printf("NULL\n");
+//}
+//
+//int main()
+//{
+//	LinkedList head = CreateList();
+//	InsertHead(head, 10);
+//	PrintList(head);
+//	DetoryList(head);
+//	return 0;
+//}
+#pragma endregion

@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\code\\practice24_9_01\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1F4E1D8B-A961-4931-8415-14B5CE9A53A5}|practice24_9_01\\practice24_9_01.vcxproj|C:\\code\\practice24_9_01\\practice24_9_01\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1F4E1D8B-A961-4931-8415-14B5CE9A53A5}|practice24_9_01\\practice24_9_01.vcxproj|solutionrelative:practice24_9_01\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1F4E1D8B-A961-4931-8415-14B5CE9A53A5}|practice24_9_01\\practice24_9_01.vcxproj|C:\\code\\practice24_9_01\\practice24_9_01\\contact.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{1F4E1D8B-A961-4931-8415-14B5CE9A53A5}|practice24_9_01\\practice24_9_01.vcxproj|solutionrelative:practice24_9_01\\contact.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F4E1D8B-A961-4931-8415-14B5CE9A53A5}|practice24_9_01\\practice24_9_01.vcxproj|C:\\code\\practice24_9_01\\practice24_9_01\\contact.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{1F4E1D8B-A961-4931-8415-14B5CE9A53A5}|practice24_9_01\\practice24_9_01.vcxproj|solutionrelative:practice24_9_01\\contact.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F4E1D8B-A961-4931-8415-14B5CE9A53A5}|practice24_9_01\\practice24_9_01.vcxproj|C:\\code\\practice24_9_01\\practice24_9_01\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1F4E1D8B-A961-4931-8415-14B5CE9A53A5}|practice24_9_01\\practice24_9_01.vcxproj|solutionrelative:practice24_9_01\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "contact.h",
               "DocumentMoniker": "C:\\code\\practice24_9_01\\practice24_9_01\\contact.h",
               "RelativeDocumentMoniker": "practice24_9_01\\contact.h",
@@ -34,31 +34,30 @@
               "RelativeToolTip": "practice24_9_01\\contact.h",
               "ViewState": "AQIAACEAAAAAAAAAAAAAACcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-01T07:49:27.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-01T07:49:27.89Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "contact.c",
               "DocumentMoniker": "C:\\code\\practice24_9_01\\practice24_9_01\\contact.c",
               "RelativeDocumentMoniker": "practice24_9_01\\contact.c",
               "ToolTip": "C:\\code\\practice24_9_01\\practice24_9_01\\contact.c",
               "RelativeToolTip": "practice24_9_01\\contact.c",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAAAFsAAAAUAAAA",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAAAFsAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-09-01T10:34:11.751Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "test.c",
               "DocumentMoniker": "C:\\code\\practice24_9_01\\practice24_9_01\\test.c",
               "RelativeDocumentMoniker": "practice24_9_01\\test.c",
               "ToolTip": "C:\\code\\practice24_9_01\\practice24_9_01\\test.c",
               "RelativeToolTip": "practice24_9_01\\test.c",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAADAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAWwB4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-09-01T07:52:54.51Z",
               "EditorCaption": ""

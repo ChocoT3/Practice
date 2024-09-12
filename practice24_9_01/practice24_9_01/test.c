@@ -10,18 +10,34 @@ void menu()
 	printf("**********  0.exit                 *********\n");
 }
 
+//int main()
+//{
+//	contact con;
+//	InitPeoInfo(&con);
+//	int input = 0;
+//	void(*p[])() = {Exit,AddPeo ,DelPeo,SearchPeo,ModifyPeo,ShowPeoInfo,SortPeo,DestroyContact};
+//	do
+//	{
+//		menu();
+//		printf("Input Your Election:>");
+//		scanf("%d", &input);
+//		p[input](&con);
+//	} while (input);
+//	return 0;
+//}
+
+
+int removeElement(int* nums, int numsSize, int val) {
+	
+}
 int main()
 {
-	contact con;
-	InitPeoInfo(&con);
-	int input = 0;
-	void(*p[])() = {Exit,AddPeo ,DelPeo,SearchPeo,ModifyPeo,ShowPeoInfo,SortPeo,DestroyContact};
-	do
+	int arr[] = {1};
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	int ret = removeElement(arr, sz, 1);
+	for (int i = 0; i < ret; i++)
 	{
-		menu();
-		printf("Input Your Election:>");
-		scanf("%d", &input);
-		p[input](&con);
-	} while (input);
+		printf("%d ", arr[i]);
+	}
 	return 0;
 }

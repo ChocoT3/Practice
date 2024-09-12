@@ -30,7 +30,8 @@
               "RelativeToolTip": "Stack\\My_Stack.h",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-07T10:07:05.3Z"
+              "WhenOpened": "2024-09-07T10:07:05.3Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -40,7 +41,7 @@
               "RelativeDocumentMoniker": "Stack\\My_Stack.c",
               "ToolTip": "C:\\code\\Stack\\Stack\\My_Stack.c",
               "RelativeToolTip": "Stack\\My_Stack.c",
-              "ViewState": "AQIAAI8DAAAAAAAAAADwv5kDAAACAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAALUDAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-09-07T10:06:56.254Z",
               "EditorCaption": ""
