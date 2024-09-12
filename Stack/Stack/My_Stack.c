@@ -455,220 +455,252 @@
 //#pragma endregion
 
 
-//#pragma region 不带头节点的单向链表
-//#include<stdio.h>
-//#include<stdlib.h>
-//#include<string.h>
-//#include<errno.h>
-//
-//#define eleType int
-//
-//typedef struct Node
-//{
-//	eleType data;
-//	struct Node* next;
-//}Node;
-//
-//typedef struct LinkedList
-//{
-//	Node* head;
-//	int size;
-//}LinkedList;
-//
-//void InitList(LinkedList* list)
-//{
-//	list->head = NULL;
-//	list->size = 0;
-//}
-//
-//void DestoryList(LinkedList* list)
-//{
-//	while (list->head != NULL)
-//	{
-//		Node* temp = list->head;
-//		list->head = temp->next;
-//		free(temp);
-//	}
-//	list->head = NULL;
-//	list->size++;
-//}
-//
-//void InsertHead(LinkedList* list,eleType element)
-//{
-//	Node* newNode = (Node*)malloc(sizeof(Node));
-//	newNode->data = element;
-//	newNode->next = list->head;
-//	list->head = newNode;
-//	list->size++;
-//}
-//
-//void Append(LinkedList* list, eleType element)
-//{
-//	if (list->size == 0)
-//	{
-//		InsertHead(list, element);
-//		return;
-//	}
-//	Node* newNode = (Node*)malloc(sizeof(Node));
-//	newNode->data = element;
-//	newNode->next = NULL;
-//	Node* current = list->head;
-//	while (current->next != NULL)
-//	{
-//		current = current->next;
-//	}
-//	current->next = newNode;
-//	list->size++;
-//}
-//
-//
-//void Insert(LinkedList* list, int index, eleType element)
-//{
-//	if (index < 0 || index > list->size)
-//	{
-//		printf("Invalid index\n");
-//		exit(1);
-//	}
-//	if (index == 0)
-//	{
-//		InsertHead(list,element);
-//		return;
-//	}
-//	else if (index = list->size)
-//	{
-//		Append(list,element);
-//		return;
-//	}
-//	else
-//	{
-//		Node* newNode = (Node*)malloc(sizeof(Node));
-//		newNode->data = element;
-//		newNode->next = NULL;
-//		Node* current = list->head;
-//		for (int i = 0; i < index - 1; i++)
-//		{
-//			current = current->next;
-//		}
-//		Node* temp = current->next;
-//		current->next = newNode;
-//		newNode->next = temp->next;
-//		free(temp);
-//		list->size++;
-//	}
-//}
-//
-//void RemoveHead(LinkedList* list)
-//{
-//	if (list->size == 0)
-//	{
-//		return;
-//	}
-//	Node* temp = list->head;
-//	list->head = temp->next;
-//	free(temp);
-//	list->size--;
-//}
-//
-//void RemoveTrail(LinkedList* list)
-//{
-//	if (list->size == 0)
-//	{
-//		printf("Empty\n");
-//		exit(1);
-//	}
-//	Node* current = list->head;
-//	while (current->next->next != NULL)
-//	{
-//		current = current->next;
-//	}
-//	Node* temp = current->next;
-//	current->next = NULL;
-//	free(temp);
-//	list->size--;
-//}
-//
-//void Remove(LinkedList* list,int index)
-//{
-//	if (index < 0 || index > list->size)
-//	{
-//		printf("Invalid index\n");
-//		exit(1);
-//	}
-//	if (index == 0)
-//	{
-//		RemoveHead(list);
-//		return;
-//	}
-//	else if (index = list->size)
-//	{
-//		RemoveTrail(list);
-//		return;
-//	}
-//	else
-//	{
-//		Node* current = list->head;
-//		for (int i = 0; i < index - 1; i++)
-//		{
-//			current = current->next;
-//		}
-//		Node* temp = current->next;
-//		current->next = temp->next;
-//		free(temp);
-//		list->size--;
-//	}
-//}
-//
-//void Updata(LinkedList* list,int index,eleType element)
-//{
-//	Node* current = list->head;
-//	for (int i = 0; i < index; i++)
-//	{
-//		current = current->next;
-//	}
-//	current->data = element;
-//}
-//
-//Node* Get(LinkedList* list, int index)
-//{
-//	Node* current = list->head;
-//	for (int i = 0; i < index; i++)
-//	{
-//		current = current->next;
-//	}
-//	return current;
-//}
-//
-//void PrintList(LinkedList* list)
-//{
-//	Node* current = list->head;
-//	while (current != NULL)
-//	{
-//		printf("%d->", current->data);
-//		current = current->next;
-//	}
-//	printf("NULL\n");
-//}
-//
-//int main()
-//{
-//	LinkedList list;
-//	InitList(&list);
-//	InsertHead(&list,10);
-//	Append(&list, 30);
-//	Append(&list, 40);
-//	Insert(&list, 1, 20);
-//	PrintList(&list);// 10 20 30 40
-//	RemoveHead(&list);
-//	RemoveTrail(&list);
-//	Remove(&list, 1);
-//	PrintList(&list);// 30
-//	Updata(&list, 0, 100);
-//	PrintList(&list);//100
-//	DestoryList(&list);
-//	printf("1");
-//	return 0;
-//}
-//#pragma endregion
+#pragma region 不带头节点的单向链表
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<errno.h>
+
+#define eleType int
+
+typedef struct Node
+{
+	eleType data;
+	struct Node* next;
+}Node;
+
+typedef struct LinkedList
+{
+	Node* head;
+	int size;
+}LinkedList;
+
+void InitList(LinkedList* list)
+{
+	list->head = NULL;
+	list->size = 0;
+}
+
+void DestoryList(LinkedList* list)
+{
+	while (list->head != NULL)
+	{
+		Node* temp = list->head;
+		list->head = temp->next;
+		free(temp);
+	}
+	list->head = NULL;
+	list->size++;
+}
+
+void InsertHead(LinkedList* list,eleType element)
+{
+	Node* newNode = (Node*)malloc(sizeof(Node));
+	newNode->data = element;
+	newNode->next = list->head;
+	list->head = newNode;
+	list->size++;
+}
+
+void Append(LinkedList* list, eleType element)
+{
+	if (list->size == 0)
+	{
+		InsertHead(list, element);
+		return;
+	}
+	Node* newNode = (Node*)malloc(sizeof(Node));
+	newNode->data = element;
+	newNode->next = NULL;
+	Node* current = list->head;
+	while (current->next != NULL)
+	{
+		current = current->next;
+	}
+	current->next = newNode;
+	list->size++;
+}
+
+
+void Insert(LinkedList* list, int index, eleType element)
+{
+	if (index < 0 || index > list->size)
+	{
+		printf("Invalid index\n");
+		exit(1);
+	}
+	if (index == 0)
+	{
+		InsertHead(list,element);
+		return;
+	}
+	else if (index = list->size)
+	{
+		Append(list,element);
+		return;
+	}
+	else
+	{
+		Node* newNode = (Node*)malloc(sizeof(Node));
+		newNode->data = element;
+		newNode->next = NULL;
+		Node* current = list->head;
+		for (int i = 0; i < index - 1; i++)
+		{
+			current = current->next;
+		}
+		Node* temp = current->next;
+		current->next = newNode;
+		newNode->next = temp->next;
+		free(temp);
+		list->size++;
+	}
+}
+
+void RemoveHead(LinkedList* list)
+{
+	if (list->size == 0)
+	{
+		return;
+	}
+	Node* temp = list->head;
+	list->head = temp->next;
+	free(temp);
+	list->size--;
+}
+
+void RemoveTrail(LinkedList* list)
+{
+	if (list->size == 0)
+	{
+		printf("Empty\n");
+		exit(1);
+	}
+	Node* current = list->head;
+	while (current->next->next != NULL)
+	{
+		current = current->next;
+	}
+	Node* temp = current->next;
+	current->next = NULL;
+	free(temp);
+	list->size--;
+}
+
+void Remove(LinkedList* list,int index)
+{
+	if (index < 0 || index > list->size)
+	{
+		printf("Invalid index\n");
+		exit(1);
+	}
+	if (index == 0)
+	{
+		RemoveHead(list);
+		return;
+	}
+	else if (index = list->size)
+	{
+		RemoveTrail(list);
+		return;
+	}
+	else
+	{
+		Node* current = list->head;
+		for (int i = 0; i < index - 1; i++)
+		{
+			current = current->next;
+		}
+		Node* temp = current->next;
+		current->next = temp->next;
+		free(temp);
+		list->size--;
+	}
+}
+
+void Updata(LinkedList* list,int index,eleType element)
+{
+	Node* current = list->head;
+	for (int i = 0; i < index; i++)
+	{
+		current = current->next;
+	}
+	current->data = element;
+}
+
+Node* Get(LinkedList* list, int index)
+{
+	Node* current = list->head;
+	for (int i = 0; i < index; i++)
+	{
+		current = current->next;
+	}
+	return current;
+}
+
+void PrintList(LinkedList* list)
+{
+	Node* current = list->head;
+	while (current != NULL)
+	{
+		printf("%d->", current->data);
+		current = current->next;
+	}
+	printf("NULL\n");
+}
+
+Node* reverseList(LinkedList* list)
+{
+	Node* cur = list->head;
+	if (list->head == NULL)
+	{
+		return list->head;
+	}
+	while (cur->next != NULL)
+	{
+		cur = cur->next;
+	}
+	Node* tail = cur;
+	int flag = 1;
+	while (flag)
+	{
+		flag = 0;
+		Node* temp = list->head;
+		while (temp->next != tail)
+		{
+			temp = temp->next;
+			flag = 1;
+		}
+		tail->next = temp;
+		tail = temp;
+	}
+	tail->next = NULL;
+	list->head = cur;
+	return list->head;
+}
+
+int main()
+{
+	LinkedList list;
+	InitList(&list);
+	InsertHead(&list,10);
+	Append(&list, 30);
+	Append(&list, 40);
+	Insert(&list, 1, 20);
+	PrintList(&list);// 10 20 30 40
+	reverseList(&list);
+	PrintList(&list);
+	//RemoveHead(&list);
+	//RemoveTrail(&list);
+	//Remove(&list, 1);
+	//PrintList(&list);// 30
+	//Updata(&list, 0, 100);
+	//PrintList(&list);//100
+	//DestoryList(&list);
+	//printf("1");
+	return 0;
+}
+#pragma endregion
 
 
 //#pragma region 带头节点的单向链表

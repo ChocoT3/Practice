@@ -35,8 +35,7 @@
               "ViewState": "AQIAAAkAAAAAAAAAAAAhwBkAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-09-11T11:20:21.67Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -46,7 +45,7 @@
               "RelativeDocumentMoniker": "SeqList02\\test.c",
               "ToolTip": "C:\\code\\SeqList02\\SeqList02\\test.c",
               "RelativeToolTip": "SeqList02\\test.c",
-              "ViewState": "AQIAAEkAAAAAAAAAAADwv2IAAAAAAAAA",
+              "ViewState": "AgIAAEkAAAAAAAAAAADwv2IAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-09-11T11:20:12.241Z",
               "IsPinned": true,
@@ -62,8 +61,7 @@
               "RelativeToolTip": "SeqList02\\SeqList.c",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-09-11T11:20:04.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-11T11:20:04.252Z"
             }
           ]
         }

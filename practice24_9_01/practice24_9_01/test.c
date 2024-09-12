@@ -27,17 +27,4 @@ void menu()
 //}
 
 
-int removeElement(int* nums, int numsSize, int val) {
-	
-}
-int main()
-{
-	int arr[] = {1};
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	int ret = removeElement(arr, sz, 1);
-	for (int i = 0; i < ret; i++)
-	{
-		printf("%d ", arr[i]);
-	}
-	return 0;
-}
+
