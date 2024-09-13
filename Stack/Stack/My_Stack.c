@@ -651,32 +651,56 @@ void PrintList(LinkedList* list)
 
 Node* reverseList(LinkedList* list)
 {
-	Node* cur = list->head;
-	if (list->head == NULL)
+	if (list->head == NULL || list->head->next == NULL)
 	{
 		return list->head;
 	}
-	while (cur->next != NULL)
+	else
 	{
-		cur = cur->next;
-	}
-	Node* tail = cur;
-	int flag = 1;
-	while (flag)
-	{
-		flag = 0;
-		Node* temp = list->head;
-		while (temp->next != tail)
+		Node* newHeadPrev = NULL;
+		Node* newHead = list->head;
+		Node* newHeadNext = NULL;
+		while (newHead)
 		{
-			temp = temp->next;
-			flag = 1;
+			newHeadNext = newHead->next;
+			newHead->next = newHeadPrev;
+			newHeadPrev = newHead;
+			newHead = newHeadNext;
 		}
-		tail->next = temp;
-		tail = temp;
+		return newHeadPrev;
 	}
-	tail->next = NULL;
-	list->head = cur;
-	return list->head;
+	
+
+	
+
+	//Node* tail = list->head;
+
+	//Node* cur = list->head;
+	//if (list->head == NULL)
+	//{
+	//	return list->head;
+	//}
+	//while (cur->next != NULL)
+	//{
+	//	cur = cur->next;
+	//}
+	//Node* tail = cur;
+	//int flag = 1;
+	//while (flag)
+	//{
+	//	flag = 0;
+	//	Node* temp = list->head;
+	//	while (temp->next != tail)
+	//	{
+	//		temp = temp->next;
+	//		flag = 1;
+	//	}
+	//	tail->next = temp;
+	//	tail = temp;
+	//}
+	//tail->next = NULL;
+	//list->head = cur;
+	//return list->head;
 }
 
 int main()
@@ -688,7 +712,7 @@ int main()
 	Append(&list, 40);
 	Insert(&list, 1, 20);
 	PrintList(&list);// 10 20 30 40
-	reverseList(&list);
+	list.head = reverseList(&list);
 	PrintList(&list);
 	//RemoveHead(&list);
 	//RemoveTrail(&list);
