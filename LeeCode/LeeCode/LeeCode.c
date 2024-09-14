@@ -120,4 +120,70 @@
 //}
 
 
+//206 反转链表
+//struct ListNode* reverseList(struct ListNode* head) {
+	//struct ListNode* newHead = NULL;
+	//struct ListNode* cur = head;
+	//struct ListNode* curNext = NULL;
+	//while (cur)
+	//{
+	//	curNext = cur->next;
+	//	cur->next = newHead;
+	//	newHead = cur;
+	//	cur = curNext;
+	//}
+	//return newHead;
+//}
+//876 返回链表中间节点
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+//struct ListNode* middleNode(struct ListNode* head) {
+//	int count = 0;
+//	struct ListNode* cur = head;
+//	struct ListNode* middleNode = head;
+//	while (cur->next)
+//	{
+//		count++;
+//		if (count % 2 == 1)
+//		{
+//			middleNode =middleNode->next;
+//		}
+//		cur = cur->next;
+//	}
+//	return middleNode;
+//}
 
+//21 合并两个有序链表 
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2) {
+	if (list1 && list2)
+	{
+		int flag = 0;
+		struct ListNode* sneakHead = list2;
+		struct ListNode* cmp = list1;
+		if (sneakHead <= cmp)
+		{
+			struct ListNode* temp = cmp;
+			cmp = sneakHead->next;
+			sneakHead->next = temp;
+			sneakHead = temp;
+		}
+		else
+		{
+			struct ListNode* temp = cmp->next;
+			cmp->next = sneakHead;
+			cmp = temp;
+		}
+	}
+}
