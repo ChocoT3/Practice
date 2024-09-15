@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
+#include<stdbool.h>
 
 #pragma region 27 移除元素
 //int removeElement(int* nums, int numsSize, int val)
@@ -166,24 +167,91 @@
  *     struct ListNode *next;
  * };
  */
-struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2) {
-	if (list1 && list2)
-	{
-		int flag = 0;
-		struct ListNode* sneakHead = list2;
-		struct ListNode* cmp = list1;
-		if (sneakHead <= cmp)
-		{
-			struct ListNode* temp = cmp;
-			cmp = sneakHead->next;
-			sneakHead->next = temp;
-			sneakHead = temp;
-		}
-		else
-		{
-			struct ListNode* temp = cmp->next;
-			cmp->next = sneakHead;
-			cmp = temp;
-		}
-	}
-}
+//struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2) {
+//	struct ListNode dummy;
+//	struct ListNode* current = &dummy;
+//	dummy.next = NULL;
+//	while (list1 != NULL && list2 != NULL) {
+//		if (list1->val <= list2->val) {
+//			current->next = list1;
+//			list1 = list1->next;
+//		}
+//		else {
+//			current->next = list2;
+//			list2 = list2->next;
+//		}
+//		current = current->next;
+//	}
+//	if (list1 != NULL) {
+//		current->next = list1;
+//	}
+//	else {
+//		current->next = list2;
+//	}
+//	return dummy.next;
+//}
+
+//141 判断是否有环
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+//bool hasCycle(struct ListNode* head) {
+//	if (head == NULL || head->next == NULL) {
+//		return 0; // 无环
+//	}
+//
+//	// 初始化快慢指针
+//	struct ListNode* slow = head;
+//	struct ListNode* fast = head;
+//
+//	while (fast != NULL && fast->next != NULL) {
+//		slow = slow->next;         // 慢指针每次走一步
+//		fast = fast->next->next;   // 快指针每次走两步
+//
+//		if (slow == fast) {
+//			return 1; // 有环
+//		}
+//	}
+//
+//	return 0; // 无环
+//
+//}
+
+//返回环的起点
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+//struct ListNode* detectCycle(struct ListNode* head) {
+//	if (head == NULL || head->next == NULL) {
+//		return NULL; // 无环
+//	}
+//
+//	struct ListNode* slow = head;
+//	struct ListNode* fast = head;
+//
+//	// 快慢指针判断链表是否有环
+//	while (fast != NULL && fast->next != NULL) {
+//		slow = slow->next;
+//		fast = fast->next->next;
+//
+//		if (slow == fast) {
+//			// 有环，寻找环的起点
+//			struct ListNode* ptr = head;
+//			while (ptr != slow) {
+//				ptr = ptr->next;
+//				slow = slow->next;
+//			}
+//			return ptr; // 返回环的起点
+//		}
+//	}
+//
+//	return NULL; // 无环
+//}
