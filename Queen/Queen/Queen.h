@@ -4,11 +4,12 @@
 #include<stdlib.h>
 #include<stdbool.h>
 
-#define eleType int
+#define Eletype int
 
-typedef struct QueueNode {
-	eleType data;
-	struct QueueNode* next;
+typedef struct QNode
+{
+	Eletype data;
+	struct QNode* next;
 }QNode;
 
 typedef struct Queue
@@ -17,5 +18,13 @@ typedef struct Queue
 	QNode* tail;
 }Queue;
 
-void InitQueen(Queue* Queue);
-void QueuePush(Queue* Queue, eleType e);
+void InitQueue(Queue* queue);
+void DestoryQueue(Queue* queue);
+void PrintQueue(Queue* queue);
+
+void QueuePush(Queue* queue,Eletype e);
+void QueuePop(Queue* queue);
+QNode* QueueFront(Queue* queue);
+QNode* QueueBack(Queue* queue);
+size_t QueueSize(Queue* queue);
+bool IsEmpty(Queue* queue);
