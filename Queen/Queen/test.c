@@ -1,112 +1,20 @@
 #define	_CRT_SECURE_NO_WARNINGS
 #include"Queen.h"
 
-void InitQueue(Queue* queue)
+int main()
 {
-	queue->head = queue->tail = NULL;
-}
-void DestoryQueue(Queue* queue)
-{
-	while (queue->head)
+	Queue queue;
+	InitQueue(&queue);
+	for (int i = 0; i < 10; i++)
 	{
-		QNode* temp = queue->head;
-		queue->head = temp->next;
-		free(temp);
+		QueuePush(&queue, i * 10);
 	}
-	queue->head = queue->tail = NULL;
-}
-void PrintQueue(Queue* queue)
-{
-	QNode* cur = queue->head;
-	while (cur)
-	{
-		printf("%d->", cur->data);
-		cur = cur->next;
-	}
-	printf("NULL\n");
-}
-
-
-void QueuePush(Queue* queue, Eletype e)
-{
-	QNode* newNode = (QNode*)malloc(sizeof(QNode));
-	if (newNode != NULL)
-	{
-		newNode->data = e;
-		newNode->next = NULL;
-		if (queue->head == NULL)
-		{
-			queue->head = newNode;
-			queue->tail = newNode;
-		}
-		queue->tail->next = newNode;
-		queue->tail = newNode;
-	}
+	QueuePop(&queue);
+	PrintQueue(&queue);
+	printf("%d %d size = %zu\n", QueueFront(&queue)->data, QueueBack(&queue)->data,QueueSize(&queue));
+	if (IsEmpty(&queue) == true)
+		printf("Queue Is Empty\n");
 	else
-	{
-		printf("memory allocated failed!");
-		exit(-1);
-	}
+		printf("Queue Not Empty\n");
+	return 0;
 }
-
-void QueuePop(Queue* queue)
-{
-	assert(queue);
-	assert(queue->head);
-	if (queue->head->next == NULL)
-	{
-		free(queue->head);
-		queue->head = queue->tail = NULL;
-	}
-	else
-	{
-		QNode* cur = queue->head;
-		queue->head = cur;
-		free(cur);
-	}
-
-}
-
-QNode* QueueFront(Queue* queue)
-{
-	if(queue->head != NULL)
-		return queue->head;
-	else
-	{
-		printf("Queue Empty!\n");
-		exit(-1);
-	}
-}
-QNode* QueueBack(Queue* queue)
-{
-	if (queue->tail != NULL)
-		return queue->tail;
-	else
-	{
-		printf("Queue Empty!\n");
-		exit(-1);
-	}
-}
-
-size_t QueueSize(Queue* queue)
-{
-	QNode* cur = queue->head;
-	size_t size = 0;
-	while (cur)
-	{
-		size++;
-		cur = cur->next;
-	}
-	return size;
-}
-
-bool IsEmpty(Queue* queue)
-{
-	if (queue->head == NULL)
-		return true;
-	else
-		return false;
-}
-
-
-

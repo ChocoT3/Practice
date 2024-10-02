@@ -4,7 +4,7 @@
 #include<stdlib.h>
 #include<stdbool.h>
 
-#define Eletype int
+typedef int Eletype;
 
 typedef struct QNode
 {

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\code\\Queen\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1B56FF69-B1E2-43C1-9BE9-7F8DA451447B}|Queen\\Queen.vcxproj|C:\\code\\Queen\\Queen\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1B56FF69-B1E2-43C1-9BE9-7F8DA451447B}|Queen\\Queen.vcxproj|solutionrelative:Queen\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{1B56FF69-B1E2-43C1-9BE9-7F8DA451447B}|Queen\\Queen.vcxproj|C:\\code\\Queen\\Queen\\Test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1B56FF69-B1E2-43C1-9BE9-7F8DA451447B}|Queen\\Queen.vcxproj|solutionrelative:Queen\\Test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B56FF69-B1E2-43C1-9BE9-7F8DA451447B}|Queen\\Queen.vcxproj|C:\\code\\Queen\\Queen\\Queen.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1B56FF69-B1E2-43C1-9BE9-7F8DA451447B}|Queen\\Queen.vcxproj|solutionrelative:Queen\\Queen.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{1B56FF69-B1E2-43C1-9BE9-7F8DA451447B}|Queen\\Queen.vcxproj|C:\\code\\Queen\\Queen\\Queue.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1B56FF69-B1E2-43C1-9BE9-7F8DA451447B}|Queen\\Queen.vcxproj|solutionrelative:Queen\\Queue.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B56FF69-B1E2-43C1-9BE9-7F8DA451447B}|Queen\\Queen.vcxproj|C:\\code\\Queen\\Queen\\Queen.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Queen\\Queen.h",
               "ToolTip": "C:\\code\\Queen\\Queen\\Queen.h",
               "RelativeToolTip": "Queen\\Queen.h",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAcwBwAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-09-15T13:44:21.712Z",
               "IsPinned": true,
@@ -40,12 +40,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "test.c",
-              "DocumentMoniker": "C:\\code\\Queen\\Queen\\test.c",
-              "RelativeDocumentMoniker": "Queen\\test.c",
-              "ToolTip": "C:\\code\\Queen\\Queen\\test.c",
-              "RelativeToolTip": "Queen\\test.c",
+              "DocumentIndex": 1,
+              "Title": "Queue.c",
+              "DocumentMoniker": "C:\\code\\Queen\\Queen\\Queue.c",
+              "RelativeDocumentMoniker": "Queen\\Queue.c",
+              "ToolTip": "C:\\code\\Queen\\Queen\\Queue.c",
+              "RelativeToolTip": "Queen\\Queue.c",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-09-15T13:44:05.294Z",
@@ -58,13 +58,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Queen.c",
-              "DocumentMoniker": "C:\\code\\Queen\\Queen\\Queen.c",
-              "RelativeDocumentMoniker": "Queen\\Queen.c",
-              "ToolTip": "C:\\code\\Queen\\Queen\\Queen.c",
-              "RelativeToolTip": "Queen\\Queen.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Test.c",
+              "DocumentMoniker": "C:\\code\\Queen\\Queen\\Test.c",
+              "RelativeDocumentMoniker": "Queen\\Test.c",
+              "ToolTip": "C:\\code\\Queen\\Queen\\Test.c",
+              "RelativeToolTip": "Queen\\Test.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-09-15T13:44:12.884Z",
               "EditorCaption": ""

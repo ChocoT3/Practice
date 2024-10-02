@@ -127,8 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Queen.c" />
-    <ClCompile Include="test.c" />
+    <ClCompile Include="Test.c" />
+    <ClCompile Include="Queue.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Queen.h" />
